@@ -37,3 +37,14 @@ def insert_user(nombre_usuario, contraseña):
     
     conexion.commit()
     conexion.close()
+    
+#🌟LOGUEANDO USUARIO
+
+def user_login(nombre_usuario, contraseña):
+    
+    conexion = create_DB()
+    cursor = conexion.cursor()
+    
+    cursor.execute(
+        'SELECT * FROM Usuario  '
+    )
